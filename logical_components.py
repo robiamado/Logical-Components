@@ -47,7 +47,7 @@ class SRNOR():
             print('SRNOR latch invalid state reset')
             self.q = True
             self.nq = False
-        print(self)
+        #print(self)
 
 # 1,1 hold
 # 0,1 set
@@ -73,7 +73,7 @@ class SRNAND():
             print('SRNAND latch invalid state reset')
             self.q = True
             self.nq = False
-        print(self)
+        #print(self)
 
 # 0,0 hold
 # 1,0 set
@@ -95,7 +95,7 @@ class SRANDOR():
         self.q = AND(sqor, NOT(self.r))
         self.s = False
         self.r = False
-        print(self)
+        #print(self)
 
 # 0,0 hold
 # 1,0 set
@@ -114,7 +114,7 @@ class JKNOR(SRNOR):
             self.q = NOR(self.r, self.nq)
         self.s = False
         self.r = False
-        print(self)
+        #print(self)
 
 # 1,1 hold
 # 0,1 set
@@ -133,7 +133,7 @@ class JKNAND(SRNAND):
             self.nq = NAND(self.r, self.q)
         self.s = False
         self.r = False
-        print(self)
+        #print(self)
 
 ################
 # FLIP-FLOP
@@ -162,7 +162,7 @@ class SRNORff():
             print('SRNOR latch invalid state reset')
             self.q = True
             self.nq = False
-        print(self)
+        #print(self)
 
 # 1,1 hold
 # 0,1 set
@@ -186,7 +186,7 @@ class SRNANDff():
             print('SRNAND latch invalid state reset')
             self.q = True
             self.nq = False
-        print(self)
+        #print(self)
 
 # 0,0 hold
 # 1,0 set
@@ -206,7 +206,7 @@ class SRANDORff():
         sqor = OR(self.s, self.q)
         orexited()
         self.q = AND(sqor, NOT(self.r))
-        print(self)
+        #print(self)
 
 # 0,0 hold
 # 1,0 set
@@ -223,7 +223,7 @@ class JKNORff(SRNORff):
         else: 
             self.nq = NOR(self.s, NOR(self.r, self.nq))
             self.q = NOR(self.r, self.nq)
-        print(self)
+        #print(self)
 
 # 1,1 hold
 # 0,1 set
@@ -240,4 +240,4 @@ class JKNANDff(SRNANDff):
         else: 
             self.q = NAND(self.s, NAND(self.r, self.q))
             self.nq = NAND(self.r, self.q)
-        print(self)
+        #print(self)
