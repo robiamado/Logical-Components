@@ -20,7 +20,7 @@ SR andor<br>
 JK nor<br>
 JK nand<br>
 
-**Flip-Flops**
+**Flip-Flops**<br>
 *To be used with an external clock on raising or lowering edge.*
 
 SR nor<br>
