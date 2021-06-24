@@ -101,38 +101,52 @@ class SRANDOR():
 # 1,0 set
 # 0,1 reset
 # 1,1 toggle
-class JKNOR(SRNOR):
-    def __call__(self, s = False, r = False, excited = lambda: None):
-        self.s = s
-        self.r = r
+class JKNOR():
+    def __init__(self, q = True):
+        self.j = False
+        self.k = False
+        self.q = q
+        self.nq = not q
+    def __str__(self):
+        return str(self.q) + ' ' + str(self.nq)
+    def __call__(self, j = False, k = False, excited = lambda: None):
+        self.j = j
+        self.k = k
         excited()
-        if self.s == True and self.r == True:
+        if self.j == True and self.k == True:
             self.nq = not self.nq
             self.q = not self.q
         else: 
-            self.nq = NOR(self.s, NOR(self.r, self.nq))
-            self.q = NOR(self.r, self.nq)
-        self.s = False
-        self.r = False
+            self.nq = NOR(self.j, NOR(self.k, self.nq))
+            self.q = NOR(self.k, self.nq)
+        self.j = False
+        self.k = False
         #print(self)
 
 # 1,1 hold
 # 0,1 set
 # 1,0 reset
 # 0,0 toggle
-class JKNAND(SRNAND):
-    def __call__(self, s = False, r = False, excited = lambda: None):
-        self.s = s
-        self.r = r
+class JKNAND():
+    def __init__(self, q = True):
+        self.j = False
+        self.k = False
+        self.q = q
+        self.nq = not q
+    def __str__(self):
+        return str(self.q) + ' ' + str(self.nq)
+    def __call__(self, j = False, k = False, excited = lambda: None):
+        self.j = j
+        self.k = k
         excited()
-        if self.s == False and self.r == False:  
+        if self.j == False and self.k == False:  
             self.q = not self.q
             self.nq = not self.nq
         else: 
-            self.q = NAND(self.s, NAND(self.r, self.q))
-            self.nq = NAND(self.r, self.q)
-        self.s = False
-        self.r = False
+            self.q = NAND(self.j, NAND(self.k, self.q))
+            self.nq = NAND(self.k, self.q)
+        self.j = False
+        self.k = False
         #print(self)
 
 ################
@@ -212,32 +226,46 @@ class SRANDORff():
 # 1,0 set
 # 0,1 reset
 # 1,1 toggle
-class JKNORff(SRNORff):
-    def __call__(self, s = False, r = False, edge = lambda: None):
-        self.s = s
-        self.r = r
+class JKNORff():
+    def __init__(self, q = True):
+        self.j = False
+        self.k = False
+        self.q = q
+        self.nq = not q
+    def __str__(self):
+        return str(self.q) + ' ' + str(self.nq)
+    def __call__(self, j = False, k = False, edge = lambda: None):
+        self.j = j
+        self.k = k
         edge()
-        if self.s == True and self.r == True:
+        if self.j == True and self.k == True:
             self.nq = not self.nq
             self.q = not self.q
         else: 
-            self.nq = NOR(self.s, NOR(self.r, self.nq))
-            self.q = NOR(self.r, self.nq)
+            self.nq = NOR(self.j, NOR(self.k, self.nq))
+            self.q = NOR(self.k, self.nq)
         #print(self)
 
 # 1,1 hold
 # 0,1 set
 # 1,0 reset
 # 0,0 toggle
-class JKNANDff(SRNANDff):
-    def __call__(self, s = False, r = False, edge = lambda: None):
-        self.s = s
-        self.r = r
+class JKNANDff():
+    def __init__(self, q = True):
+        self.j = False
+        self.k = False
+        self.q = q
+        self.nq = not q
+    def __str__(self):
+        return str(self.q) + ' ' + str(self.nq)
+    def __call__(self, j = False, k = False, edge = lambda: None):
+        self.j = j
+        self.k = k
         edge()
-        if self.s == False and self.r == False:  
+        if self.j == False and self.k == False:  
             self.q = not self.q
             self.nq = not self.nq
         else: 
-            self.q = NAND(self.s, NAND(self.r, self.q))
-            self.nq = NAND(self.r, self.q)
+            self.q = NAND(self.j, NAND(self.k, self.q))
+            self.nq = NAND(self.k, self.q)
         #print(self)
