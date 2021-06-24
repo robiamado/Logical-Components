@@ -3,7 +3,7 @@ Boolean gates, latches and flip-flops in Python.
 
 **Gates**
 
-Buffer
+Buffer \n
 And
 Or
 Not
