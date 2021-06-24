@@ -1,7 +1,7 @@
 # Logical-Components
 Boolean gates, latches and flip-flops in Python.
 
-*Gates*
+**Gates**
 
 Buffer
 And
@@ -12,7 +12,7 @@ Nor
 Xor
 Xnor
 
-*Latches*
+**Latches**
 
 SR nor
 SR nand
@@ -20,8 +20,8 @@ SR andor
 JK nor
 JK nand
 
-*Flip-Flops*
-To be used with an external clock on raising or lowering edge.
+**Flip-Flops**
+*To be used with an external clock on raising or lowering edge.*
 
 SR nor
 SR nand
