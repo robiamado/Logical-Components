@@ -4,9 +4,9 @@ Boolean gates, latches and flip-flops in Python.
 **Install**
 
 source install:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - copy plc_main.py in your root folder and import plc_main.py<br>
+&nbsp; - copy plc_main.py in your root folder and import plc_main.py<br><br>
 pip install:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - from dist folder: pip install plc_main-1.0-py3-none-any.whl<br>
+&nbsp; - from dist folder: pip install plc_main-1.0-py3-none-any.whl<br>
 
 **Gates**
 
