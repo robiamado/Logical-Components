@@ -1,4 +1,4 @@
-# Logical-Components
+# Python Logical Components
 Boolean gates, latches and flip-flops in Python.
 
 ## Requirements
