@@ -4,10 +4,10 @@ Boolean gates, latches and flip-flops in Python.
 ## Install
 
 source install:
-- copy plc_main.py in your root folder and add _import plc_main_ in .py source file.
+- copy plc_main.py in your root folder and add _from plc_main.py import *_ in .py source file.
 
 pip install:
-- from dist folder: pip install plc_main-1.0-py3-none-any.whl
+- from dist folder: pip install plc_main-1.0-py3-none-any.whl add _from plc_main import *_ in .py source file.
 
 ## Gates
 
