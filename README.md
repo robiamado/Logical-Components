@@ -1,14 +1,15 @@
 ## Logical-Components
 Boolean gates, latches and flip-flops in Python.
 
-#Install
+# Install
 
 source install:
 - copy plc_main.py in your root folder and add _import plc_main_ in .py source file.
+
 pip install:
 - from dist folder: pip install plc_main-1.0-py3-none-any.whl
 
-#Gates
+# Gates
 
 Buffer<br>
 And<br>
@@ -19,7 +20,7 @@ Nor<br>
 Xor<br>
 Xnor<br>
 
-#Latches
+# Latches
 
 SR nor<br>
 SR nand<br>
@@ -27,7 +28,7 @@ SR andor<br>
 JK nor<br>
 JK nand<br>
 
-#Flip-Flops
+# Flip-Flops
 *To be used with an external clock on raising or lowering edge.*
 
 SR nor<br>
