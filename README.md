@@ -37,4 +37,6 @@ SR andor<br>
 JK nor<br>
 JK nand<br>
 
+## Contacts
+
 Please report any bug at robiamado@gmail.com
