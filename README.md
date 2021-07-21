@@ -1,6 +1,10 @@
 # Logical-Components
 Boolean gates, latches and flip-flops in Python.
 
+## Requirements
+
+- Python >=3.9
+
 ## Install
 
 source install:
